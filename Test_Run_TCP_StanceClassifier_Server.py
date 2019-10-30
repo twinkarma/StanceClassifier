@@ -1,7 +1,7 @@
 import socket, json
 import sys
 from struct import pack
-from StanceClassifier.util import *
+from stanceclassifier.util import *
 
 
 #Load configurations

@@ -5,7 +5,7 @@ import sys
 import socket, json
 
 sys.path[0:0] = ["util/"]
-from StanceClassifier.util import Util, path_from_root
+from stanceclassifier.util import Util, path_from_root
 
 
 class StanceClassifier:

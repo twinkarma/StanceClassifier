@@ -3,8 +3,8 @@ import json
 import sys
 from os import getcwd
 from struct import unpack
-from StanceClassifier.stance_classifier import StanceClassifier
-from StanceClassifier.util import Util, path_from_root
+from stanceclassifier.stanceclassifier import StanceClassifier
+from stanceclassifier.util import Util, path_from_root
 
 class StanceClassifierTCPServerRunner:
 

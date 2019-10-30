@@ -21,9 +21,9 @@ from joblib import dump, load
 from sklearn.metrics import confusion_matrix, precision_score, f1_score, accuracy_score, recall_score
 import json
 import glob
-from StanceClassifier.training.preprocesstwitter import PreprocessTwitter
-from StanceClassifier.features.extract_features import Features
-from StanceClassifier.util import Util
+from stanceclassifier.training.preprocesstwitter import PreprocessTwitter
+from stanceclassifier.features.extract_features import Features
+from stanceclassifier.util import Util
 
 
 def new_features(l_file, dataset, feature_extractor):

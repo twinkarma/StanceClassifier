@@ -1,6 +1,6 @@
 import urllib.request
 import json
-from StanceClassifier.util import *
+from stanceclassifier.util import *
 
 
 info = {}

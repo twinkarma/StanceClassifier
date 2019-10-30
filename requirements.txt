@@ -3,3 +3,4 @@ numpy
 scipy
 scikit_learn==0.21.2
 joblib
+flask

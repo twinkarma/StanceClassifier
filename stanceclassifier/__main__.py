@@ -1,7 +1,7 @@
 import sys
 import argparse
 import json
-from StanceClassifier.stance_classifier import StanceClassifier
+from stanceclassifier import StanceClassifier
 
 
 
