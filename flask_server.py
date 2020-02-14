@@ -12,6 +12,9 @@ def init_server():
     if stance_classifier is None:
         stance_classifier = StanceClassifier("lr")
 
+# Initialise the model first
+init_server()
+
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
@@ -41,7 +44,6 @@ def index():
 
 # run the server
 if __name__ == '__main__':
-    init_server()
     app.run(host='0.0.0.0', port='9125', debug=True)
 
 
