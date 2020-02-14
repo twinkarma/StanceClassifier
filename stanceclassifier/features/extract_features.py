@@ -100,7 +100,7 @@ class Features():
         return v_acronym
 
     def read_emoticon(self, f):
-        f_emoticon = open(path_from_root(f), "r")
+        f_emoticon = open(path_from_root(f), "r" , encoding="utf-8")
         dict_emoticon = {}
         for l in f_emoticon.readlines():
             t = l.strip().split("\t")
