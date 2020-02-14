@@ -1,3 +1,4 @@
+import sys, traceback
 from flask import Flask
 from flask import request
 from flask import jsonify
@@ -37,8 +38,9 @@ def index():
 
         return jsonify({"error": "Invalid input"}), 400
 
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+    except Exception:
+        traceback.print_exc(file=sys.stdout)
+        return jsonify({"error": "Unexpected error, check logs for more details"}), 400
 
 
 

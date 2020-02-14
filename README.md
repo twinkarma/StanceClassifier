@@ -45,7 +45,36 @@ python -m StanceClassifier -l <LANGUAGE> -s <ORIGINAL_JSON> -o <REPLY_JSON> -c <
         original_new and reply_new are examples of the new JSON files (280 characters)
 
 ### `StanceClassifer` class (StanceClassifier.stance_classifier.StanceClassifier)
-This is the main class in this project. If you want to add this project as part of your own project, you should import this class. 
+This is the main class in this project. If you want to add this project as part of your own project, you should import this class.
+
+
+
+
+### Deployed server
+
+#### Flask, WSGI & Unicorn server
+Flask version of the HTTP server can be found the in `flask_server.py` module.
+
+#### Deploy/Run instructions
+
+Starting the service:
+```
+sudo start stance-classifier
+```
+
+Stopping the service:
+```
+sudo stop stance classifier
+```
+
+The server is deployed on `gateservice10.gate.ac.uk` at port `9125`. The service starts using the script:
+```
+./run_stance_classifier_server.sh
+``` 
+
+Upstart logs can be found at `/var/log/upstart/stance-classifier.log`
+
+
 
 ### Server usage
 We have implemented TCP and HTTP servers. Server parameters are defined in the `configurations.txt` file.
