@@ -7,16 +7,15 @@ stance_classifier = None
 
 app = Flask(__name__)
 
-def init_server():
-    global stance_classifier
-    stance_classifier = StanceClassifier("lr")
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
     try:
 
+        global stance_classifier
+
         if stance_classifier is None:
-            return jsonify({"error": "Could not start classifier"})
+            stance_classifier = StanceClassifier("lr")
 
         if request.method == 'POST':
             req_json = request.get_json()
@@ -38,7 +37,6 @@ def index():
 
 # run the server
 if __name__ == '__main__':
-    init_server()
     app.run(host='0.0.0.0', port='9125', debug=True)
 
 
