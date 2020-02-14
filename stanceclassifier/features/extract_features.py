@@ -50,7 +50,7 @@ class Features():
 
 
     def read_doubt_words(self, f):
-        f_doubt = open(path_from_root(f), "r")
+        f_doubt = open(path_from_root(f), "r", encoding="utf-8")
         v_doubt = []
         for l in f_doubt.readlines():
             tokens = l.split(",")
@@ -59,7 +59,7 @@ class Features():
         return v_doubt
 
     def read_no_doubt_words(self, f):
-        f_no_doubt = open(path_from_root(f), "r")
+        f_no_doubt = open(path_from_root(f), "r", encoding="utf-8")
         v_no_doubt = []
         for l in f_no_doubt.readlines():
             tokens = l.split(",")
@@ -68,7 +68,7 @@ class Features():
         return v_no_doubt
 
     def read_surprise_words(self, f):
-        f_surprise = open(path_from_root(f), "r")
+        f_surprise = open(path_from_root(f), "r", encoding="utf-8")
         v_surprise = []
         for l in f_surprise.readlines():
             t = l.split("\t")
@@ -76,7 +76,7 @@ class Features():
         return v_surprise
 
     def read_google_bad_words(self, f):
-        f_google_bad = open(path_from_root(f), "r")
+        f_google_bad = open(path_from_root(f), "r", encoding="utf-8")
         v_google_bad = []
         for l in f_google_bad.readlines():
             t = l.split(":")
@@ -84,7 +84,7 @@ class Features():
         return v_google_bad
 
     def read_vulgar_words(self, f):
-        f_vulgar = open(path_from_root(f), "r")
+        f_vulgar = open(path_from_root(f), "r", encoding="utf-8")
         v_vulgar = []
         for l in f_vulgar.readlines():
             t = l.split("-")
@@ -93,14 +93,14 @@ class Features():
 
 
     def read_acronyms(self, f):
-        f_acronym = open(path_from_root(f), "r")
+        f_acronym = open(path_from_root(f), "r", encoding="utf-8")
         v_acronym = []
         for l in f_acronym.readlines():
             v_acronym.append(l.strip())
         return v_acronym
 
     def read_emoticon(self, f):
-        f_emoticon = open(path_from_root(f), "r" , encoding="utf-8")
+        f_emoticon = open(path_from_root(f), "r", encoding="utf-8")
         dict_emoticon = {}
         for l in f_emoticon.readlines():
             t = l.strip().split("\t")
@@ -123,7 +123,7 @@ class Features():
         return model
 
     def open_json(self, f):
-        with open(path_from_root(f)) as json_file:
+        with open(path_from_root(f), encoding="utf-8") as json_file:
             data = json.load(json_file)
             return data
 
