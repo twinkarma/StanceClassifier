@@ -111,7 +111,7 @@ class Features():
 
     def loadGloveModel(self, gloveFile):
         print("Loading Glove Model")
-        f = open(path_from_root(gloveFile), 'r')
+        f = open(path_from_root(gloveFile), 'r', encoding="utf-8")
         model = {}
         for line in f:
             splitLine = line.split(" ")
