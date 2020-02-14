@@ -74,7 +74,8 @@ The server is deployed on `gateservice10.gate.ac.uk` at port `9125`. The service
 
 Upstart logs can be found at `/var/log/upstart/stance-classifier.log`
 
-
+**Note:** Upstart was giving ascii decode error for printing and opening files, it was down to not having the 
+`LANG=en_GB.UTF-8` environment variable set. This has been added to the run script.
 
 ### Server usage
 We have implemented TCP and HTTP servers. Server parameters are defined in the `configurations.txt` file.
