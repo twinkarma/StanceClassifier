@@ -50,7 +50,7 @@ This is the main class in this project. If you want to add this project as part 
 
 
 
-### Deployed server
+### Deployed server on gateservice10
 
 #### Flask, WSGI & Unicorn server
 Flask version of the HTTP server can be found the in `flask_server.py` module.
